@@ -144,3 +144,4 @@ Developed by [PradaFit](https://github.com/PradaFit)
 
 - Windows API documentation from Microsoft
 - The .NET community for performance optimization techniques
+
