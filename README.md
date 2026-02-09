@@ -1,6 +1,7 @@
 # Fast File Explorer
 
 A high-performance file explorer for Windows, built from scratch with speed as the primary focus. This application uses native Windows APIs and multi-threaded indexing to deliver near-instant file searches across your entire system.
+<img width="1280" height="720" alt="FastFileExplorer_Screenshot_V1" src="https://github.com/user-attachments/assets/a1628dce-1a0d-4942-8f65-f537ef4b62ef" />
 
 ## Features
 
@@ -144,4 +145,5 @@ Developed by [PradaFit](https://github.com/PradaFit)
 
 - Windows API documentation from Microsoft
 - The .NET community for performance optimization techniques
+
 
