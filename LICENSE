@@ -1,0 +1,115 @@
+PradaFit Open Source License
+Version 1.0, 2026
+
+Copyright (c) 2026 PradaFit
+https://github.com/PradaFit
+
+TERMS AND CONDITIONS
+
+1. DEFINITIONS
+
+"Software" refers to Fast File Explorer and all associated source code,
+documentation, and related files contained in this repository.
+
+"Author" refers to PradaFit, the original creator and copyright holder.
+
+"You" refers to any individual or entity exercising rights under this License.
+
+2. GRANT OF RIGHTS
+
+Subject to the terms of this License, the Author grants You a worldwide,
+royalty-free, non-exclusive license to:
+
+a) Use the Software for personal, educational, or commercial purposes.
+
+b) View, study, and learn from the source code.
+
+c) Modify the Software for your own use.
+
+d) Distribute copies of the original Software.
+
+e) Distribute your modifications, provided you comply with Section 3.
+
+3. CONDITIONS FOR DISTRIBUTION
+
+If You distribute the Software or any derivative works, You must:
+
+a) Include a copy of this License with every distribution.
+
+b) Clearly attribute the original work to PradaFit with a link to
+   https://github.com/PradaFit in any documentation, about dialogs,
+   or readme files.
+
+c) Indicate if changes were made to the original Software.
+
+d) Not use the name "PradaFit" or "Fast File Explorer" to endorse or
+   promote derivative products without prior written permission.
+
+e) Not remove or alter any copyright notices in the source code.
+
+4. DERIVATIVE WORKS
+
+You may create and distribute derivative works under the following conditions:
+
+a) Derivative works must be distributed under this same License or a
+   compatible open source license.
+
+b) You must document all modifications made to the original Software.
+
+c) The original copyright notice and attribution must be preserved.
+
+5. COMMERCIAL USE
+
+Commercial use of the Software is permitted, provided that:
+
+a) Attribution to the original Author is maintained.
+
+b) The Software is not sold as a standalone product without substantial
+   modifications or added value.
+
+c) Any commercial distribution includes this License.
+
+6. PATENT RIGHTS
+
+This License does not grant any patent rights. If You have patent claims
+that would be infringed by the Software, You agree not to assert those
+claims against users of the Software.
+
+7. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING
+FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+8. LIMITATION OF LIABILITY
+
+Under no circumstances shall the Author be liable for any indirect,
+incidental, special, consequential, or punitive damages, regardless of
+the cause of action or the nature of the claim.
+
+9. TERMINATION
+
+This License and the rights granted hereunder will terminate automatically
+if You fail to comply with any of its terms. Upon termination, You must
+cease all use and distribution of the Software.
+
+10. GOVERNING LAW
+
+This License shall be governed by and construed in accordance with
+applicable copyright law, without regard to conflict of law principles.
+
+11. ENTIRE AGREEMENT
+
+This License constitutes the entire agreement between You and the Author
+concerning the Software and supersedes all prior agreements and
+understandings.
+
+---
+
+For questions about this License, contact the Author through GitHub:
+https://github.com/PradaFit
