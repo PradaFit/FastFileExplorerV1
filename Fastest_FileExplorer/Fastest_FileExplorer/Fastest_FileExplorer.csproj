@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1C16C74-2502-74DB-9202-2A4F6901FFC5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Fastest_FileExplorer</RootNamespace>
+    <AssemblyName>Fastest_FileExplorer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\DiscordRpcClient.cs" />
+    <Compile Include="Core\FileIndexer.cs" />
+    <Compile Include="Core\FileSystemCache.cs" />
+    <Compile Include="Core\NativeFileEnumerator.cs" />
+    <Compile Include="Core\PathSecurity.cs" />
+    <Compile Include="Core\SearchEngine.cs" />
+    <Compile Include="Core\ToastNotification.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\BatchRenameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BreadcrumbBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\CommandPalette.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DualPaneManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\NavigationPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\PreviewPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\QuickAccessPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\SearchBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\TabManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Theme.cs" />
+    <Compile Include="UI\VirtualFileListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include=".github\prompts\BeastMode31.prompt.md" />
+    <None Include="bin\Debug\Fastest_FileExplorer.exe.config" />
+    <None Include="bin\x64\Debug\Fastest_FileExplorer.exe.config" />
+    <None Include="Docs_Info\File Pilot - Next-gen file explorer_files\ad_status.js.download" />
+    <None Include="Docs_Info\File Pilot - Next-gen file explorer_files\base.js.download" />
+    <None Include="Docs_Info\File Pilot - Next-gen file explorer_files\cast_sender%281%29.js.download" />
+    <None Include="Docs_Info\File Pilot - Next-gen file explorer_files\cast_sender.js.download" />
+    <None Include="Docs_Info\File Pilot - Next-gen file explorer_files\embed.js.download" />
+    <None Include="Docs_Info\File Pilot - Next-gen file explorer_files\paddle.js.download" />
+    <None Include="Docs_Info\File Pilot - Next-gen file explorer_files\profitwell.js.download" />
+    <None Include="Docs_Info\File Pilot - Next-gen file explorer_files\remote.js.download" />
+    <None Include="Docs_Info\File Pilot - Next-gen file explorer_files\www-embed-player-es6.js.download" />
+    <None Include="LICENSE" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Fastest_.A6C835C8.Up2Date" />
+    <None Include="obj\Debug\Fastest_FileExplorer.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\Fastest_FileExplorer.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Fastest_FileExplorer.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\Fastest_FileExplorer.csproj.new.AssemblyReference.cache" />
+    <None Include="obj\Debug\Fastest_FileExplorer.csproj.new.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Fastest_FileExplorer.csproj.new.GenerateResource.cache" />
+    <None Include="obj\x64\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\x64\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\x64\Debug\Fastest_.A6C835C8.Up2Date" />
+    <None Include="obj\x64\Debug\Fastest_FileExplorer.csproj.AssemblyReference.cache" />
+    <None Include="obj\x64\Debug\Fastest_FileExplorer.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\x64\Debug\Fastest_FileExplorer.csproj.GenerateResource.cache" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="README.md" />
+    <None Include="Summary_and_Feature_list.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="bin\Debug\Fastest_FileExplorer.exe" />
+    <Content Include="bin\Debug\Fastest_FileExplorer.pdb" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\x64\Debug\Fastest_FileExplorer.exe" />
+    <Content Include="bin\x64\Debug\Fastest_FileExplorer.pdb" />
+    <Content Include="bin\x64\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\x64\Debug\Newtonsoft.Json.xml" />
+    <Content Include="Docs_Info\File Pilot - Next-gen file explorer.html" />
+    <Content Include="Docs_Info\File Pilot - Next-gen file explorer_files\BadgeFilePilot.svg" />
+    <Content Include="Docs_Info\File Pilot - Next-gen file explorer_files\bUOOaXf9qIM.html" />
+    <Content Include="Docs_Info\File Pilot - Next-gen file explorer_files\FilePilot.svg" />
+    <Content Include="Docs_Info\File Pilot - Next-gen file explorer_files\FilePilotLogo.svg" />
+    <Content Include="Docs_Info\File Pilot - Next-gen file explorer_files\FilePilotTM.svg" />
+    <Content Include="Docs_Info\File Pilot - Next-gen file explorer_files\paddle.css" />
+    <Content Include="Docs_Info\File Pilot - Next-gen file explorer_files\Reactions.png" />
+    <Content Include="Docs_Info\File Pilot - Next-gen file explorer_files\SplashProgressive.jpg" />
+    <Content Include="Docs_Info\File Pilot - Next-gen file explorer_files\WindowsLogo.svg" />
+    <Content Include="Docs_Info\File Pilot - Next-gen file explorer_files\www-player.css" />
+    <Content Include="obj\Debug\Fastest_FileExplorer.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Fastest_FileExplorer.csproj.new.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Fastest_FileExplorer.exe" />
+    <Content Include="obj\Debug\Fastest_FileExplorer.pdb" />
+    <Content Include="obj\x64\Debug\Fastest_FileExplorer.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x64\Debug\Fastest_FileExplorer.exe" />
+    <Content Include="obj\x64\Debug\Fastest_FileExplorer.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\x64\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
